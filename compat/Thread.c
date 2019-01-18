@@ -97,6 +97,7 @@ Condition thread_sNum_cond;
  * level in solaris.
  * ------------------------------------------------------------------- */
 void thread_init( ) {
+    thread_sNum = 0;
     Condition_Initialize( &thread_sNum_cond );
 #if defined( sun )
     /* Solaris apparently doesn't default to timeslicing threads,
