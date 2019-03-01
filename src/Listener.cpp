@@ -317,7 +317,9 @@ sInterupted == SIGALRM
 	    // is handling the current one
             if ( UDP ) {
                 mSettings->mSock = -1;
+#if defined(WIN32) || defined( HAVE_DECL_SO_REUSEADDR)
                 Listen( );
+#endif
             }
 
             // Prep for next connection

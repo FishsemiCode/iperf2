@@ -88,6 +88,10 @@
 /* Define to 1 if you have the declaration of `SO_TIMESTAMP', and to 0 if you
    don't. */
 /* #undef HAVE_DECL_SO_TIMESTAMP */
+
+/* Define to 1 if you have the declaration of `SO_REUSEADDR', and to 0 if you
+   don't. */
+/* #undef HAVE_DECL_SO_REUSEADDR */
 #endif
 
 /* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
