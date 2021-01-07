@@ -24,6 +24,10 @@ config TOOLS_IPERF2_STACKSIZE
 	int "iperf2 stack size"
 	default 2048
 
+config TOOLS_IPERF2_MAX_BUF_SIZE
+    int "iperf2 max buffer size"
+    default 1576
+
 endif
 
 endmenu

@@ -885,6 +885,9 @@ void Settings_ModalOptions( thread_Settings *mExtSettings ) {
 	    mExtSettings->mBufLen = kDefault_TCPBufLen;
 	}
     }
+    if (mExtSettings->mBufLen > CONFIG_TOOLS_IPERF2_MAX_BUF_SIZE) {
+	mExtSettings->mBufLen = CONFIG_TOOLS_IPERF2_MAX_BUF_SIZE;
+    }
     // Handle default UDP offered load (TCP will be max, i.e. no read() or write() rate limiting)
     if (!isBWSet(mExtSettings) && isUDP(mExtSettings)) {
 	mExtSettings->mUDPRate = kDefault_UDPRate;
